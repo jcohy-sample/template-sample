@@ -1,3 +1,6 @@
+apply plugin: 'java-library'
+
+
 description = "sample template for asciidoctor project"
 
 group = "com.jcohy.sample"
