@@ -13,4 +13,3 @@ https://www.jcohy.com[*https://www.jcohy.com/projects*]
 ****
 
 [horizontal]
-//<<feature.adoc#java-overview, Java 基础>> :: java 个版本新特性
