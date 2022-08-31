@@ -13,5 +13,3 @@ https://www.jcohy.com[*https://www.jcohy.com/projects*]
 ****
 
 [horizontal]
-
-https://study.jcohy.com/html5/java.html#java-overview[Java 基础]
