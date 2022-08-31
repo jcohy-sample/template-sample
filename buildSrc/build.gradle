@@ -29,6 +29,10 @@ gradlePlugin {
 			id = "com.jcohy.docs"
 			implementationClass = "com.jcohy.sample.build.JcohyAsciidoctorPlugins"
 		}
+		deployedPlugin {
+			id = "com.jcohy.module"
+			implementationClass = "com.jcohy.sample.build.JavaModulePlugins"
+		}
 		uploadPlugin {
 			id = "com.jcohy.oss-upload"
 			implementationClass = "com.jcohy.sample.build.OssUploadPlugins"
