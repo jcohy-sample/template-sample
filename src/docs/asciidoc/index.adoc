@@ -12,3 +12,5 @@ https://www.jcohy.com[*https://www.jcohy.com/projects*]
 ****
 
 [horizontal]
+
+<<legal#legal,Legal>> :: 版权信息.
