@@ -27,8 +27,8 @@ public class JcohyAsciidoctorPlugins implements Plugin<Project> {
     public void apply(Project project) {
         PluginContainer plugins = project.getPlugins();
         plugins.apply(AsciidoctorJPlugin.class);
-        plugins.apply(AsciidoctorConventionsPlugin.class);
         plugins.apply(ConventionsPlugin.class);
+        plugins.apply(AsciidoctorConventionsPlugin.class);
         plugins.apply(DeployedPlugin.class);
         plugins.withType(AsciidoctorJPlugin.class,(asciidoctorPlugin) -> {
             project.getTasks().withType(AbstractAsciidoctorTask.class, (asciidoctorTask) -> {
