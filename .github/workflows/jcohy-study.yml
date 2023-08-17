@@ -25,7 +25,7 @@ jobs:
       - name: Upload To AliOSS
         uses: gradle/gradle-build-action@749f47bda3e44aa060e82d7b3ef7e40d953bd629
         with: 
-          arguments: ./gradlew uploadOssFiles -x asciidoctorPdf
+          arguments: uploadOssFiles -x asciidoctorPdf
         env:
           ACCESS_KEY: ${{ secrets.ACCESS_KEY }}
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
