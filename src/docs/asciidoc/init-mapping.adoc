@@ -696,7 +696,7 @@ public class XMLStatementBuilder extends BaseBuilder {
 . 获取 lang 属性，`LanguageDriver` 语言驱动器，默认为 `XMLLanguageDriver`
 . 将该节点的 `<selectKey />` 子节点解析成 `SelectKeyGenerator` 生成器，用于生成一个 key 设置到返回对象中，在 `processSelectKeyNodes` 方法中可以看到，该过程也会生成一个 `MappedStatement` 对象，生成的对象的 `id` 为 `statementId+'!selectKey'`
 . 解析 `useGeneratedKeys` 属性，获取 `SelectKeyGenerator` 生成器，如果第 7 步没有生成才会进入这里，直接返回 `Jdbc3KeyGenerator` 单例
-. 根据 `XMLLanguageDriver` 语言驱动创建 `SqlSource` 对象，通过这个对象可以获取到对应的 SQL 语句，在后面的 <<mybatis-init-sql>> 分析该创建过程
+. 根据 `XMLLanguageDriver` 语言驱动创建 `SqlSource` 对象，通过这个对象可以获取到对应的 SQL 语句，在后面的 <<init-sql.adoc#mybatis-init-sql>> 分析该创建过程
 . 获取 `statementType` 属性，`Statement` 类型，默认 `PREPARED`
 . 获取其他的一下相关信息，例如：`timeout`、`resultMap`、`keyProperty`、`keyColumn` 等属性，其中配置的 `resultType` 也会转换成 `ResultMap` 对象
 . 通过 `MapperBuilderAssistant` 构造器小助手根据这些属性信息构建一个 `MappedStatement` 对象

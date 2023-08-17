@@ -27,7 +27,6 @@ public class OssUploadPlugins implements Plugin<Project> {
 		extension.getUpload().setSource(buildDir+"/generated");
 		extension.setBucket("jcohy-study");
 		extension.getUpload().setPrefix("template");
-
 		extension.getUpload().setIgnoreSourceDir(true);
 	}
 }

@@ -306,6 +306,6 @@ MixedSqlNode(rootSqlNode)
 . 通过 Xml 文件配置 Mapper 对应的 SQL 语句，这些 SQL 语句中可以包含动态 SQL 语句。
 . Mybatis 会在运行时将 Xml 文件中的 SQL 语句解析成 `SqlNode` 的树形结构，该结构中的每个 `SqlNode` 对象表示 Xml 文件中的一个节点，每个 `SqlNode` 都会实现 `SqlNode` 接口。
 . 动态 SQL 语句的生成是通过 `SqlNode` 接口的实现类的实现完成的，具体生成逻辑定义在 `SqlNode` 的实现类中。
-. 当 Mybatis 执行 Mapper 中的方法时，会使用 `SqlSource` 类的 `getBoundSql` 方法生成最终的动态 SQL 语句，该方法会对 `SqlNode` 的树形结构进行遍历， 并利用 `XMLScriptBuilder.NodeHandler` 的多个实现类动态生成最终的 SQL 语句。关于 SQL 执行的细节，请查看 <<mybatis-init-excute>>
+. 当 Mybatis 执行 Mapper 中的方法时，会使用 `SqlSource` 类的 `getBoundSql` 方法生成最终的动态 SQL 语句，该方法会对 `SqlNode` 的树形结构进行遍历， 并利用 `XMLScriptBuilder.NodeHandler` 的多个实现类动态生成最终的 SQL 语句。关于 SQL 执行的细节，请查看 <<sql-parse.adoc#mybatis-init-excute>>
 
 因此，动态 SQL 的生成是通过对 `SqlNode` 接口的实现类的利用和遍历实现的，Mybatis 在运行时通过组合 `SqlNode` 和通过遍历 `SqlNode` 生成的结果来生成最终的动态 SQL 语句。
